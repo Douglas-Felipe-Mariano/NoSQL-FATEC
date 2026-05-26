@@ -10,19 +10,21 @@
 
 ## 🚀 Subindo o ambiente Redis
 
-### 1. Clone ou acesse a pasta do projeto
+### Opção A — Com docker-compose (recomendado)
 
 ```bash
-cd NoSQL-FATEC
+docker-compose up -d
 ```
 
-### 2. Build da imagem
+### Opção B — Com docker manualmente
+
+#### 1. Build da imagem
 
 ```bash
 docker build -t redis-fatec .
 ```
 
-### 3. Subir o container
+#### 2. Subir o container
 
 ```bash
 docker run -d --name redis-fatec -p 6379:6379 redis-fatec
@@ -30,7 +32,7 @@ docker run -d --name redis-fatec -p 6379:6379 redis-fatec
 
 > O Redis estará disponível em `localhost:6379`
 
-### 4. Verificar se está rodando
+### 3. Verificar se está rodando
 
 ```bash
 docker ps
